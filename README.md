@@ -13,3 +13,8 @@ git commit -m 'First commit'
 git pull
 
 bash init_setup.sh
+
+python setup.py install
+
+pip install -r requirements.txt
+
