@@ -10,3 +10,6 @@ git add .
 
 git commit -m 'First commit'
 
+git pull
+
+bash init_setup.sh
