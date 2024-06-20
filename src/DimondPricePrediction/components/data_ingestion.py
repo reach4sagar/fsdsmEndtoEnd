@@ -47,4 +47,4 @@ class DataIngestion:
 
 
         except Exception as e:
-            pass
+            raise customexception(e,sys)
