@@ -38,8 +38,16 @@ def evaluate_model(X_train,y_train,X_test,y_test,models):
 
             report[list(models.keys())[i]] =  test_model_score
 
-            return report
+        return report
 
     except Exception as e:
         logging.info('Exception occured during model training')
+        raise customexception(e,sys)
+    
+def load_object(file_path):
+    try:
+        with open(file_path,'rb') as file_obj:
+            return pickle.load(file_obj)
+    except Exception as e:
+        logging.info('Exception occured in load_object function utils')
         raise customexception(e,sys)

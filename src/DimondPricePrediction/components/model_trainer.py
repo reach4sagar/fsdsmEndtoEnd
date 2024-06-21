@@ -30,12 +30,7 @@ class ModelTrainer:
                 test_array[:,-1]
             )
 
-            models={
-            'LinearRegression':LinearRegression(),
-            'Lasso':Lasso(),
-            'Ridge':Ridge(),
-            'Elasticnet':ElasticNet()
-            }
+            models={'LinearRegression':LinearRegression(),'Lasso':Lasso(),'Ridge':Ridge(),'Elasticnet':ElasticNet()}
 
             model_report:dict = evaluate_model(X_train,y_train,X_test,y_test,models)
             print(model_report)
